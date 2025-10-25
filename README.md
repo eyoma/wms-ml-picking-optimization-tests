@@ -43,7 +43,7 @@ This project implements machine learning models to optimize warehouse picking se
 
 ### Advanced LightGBM Ranker Architecture
 
-[View on Eraser![](https://app.eraser.io/workspace/32DQ9UadLiAZe47K4lyo/preview?elements=TKB_FeJtsO3nOp4FZZechA&type=embed)](https://app.eraser.io/workspace/32DQ9UadLiAZe47K4lyo?elements=TKB_FeJtsO3nOp4FZZechA)
+![Advanced LightGBM Ranker Architecture](diagram.svg)
 
 ### Documentation Files
 
