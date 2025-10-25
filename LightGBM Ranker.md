@@ -1,0 +1,9 @@
+Switching to a Learning-to-Rank model like LightGBM Ranker will allow us to leverage more features and potentially improve the prediction of the most efficient picking sequence. Here is a plan to rewrite the notebook using LightGBM Ranker.
+
+Data preparation for ltr: Transform the picking sequences into pairs of (query, document) where a query is a partial picking sequence for an order, and documents are the remaining bins to be picked for that order. Create labels based on the actual picking sequence (relevant documents are the next bins in the sequence).
+Feature engineering: Extract relevant features for each (query, document) pair. This might include features related to the current bin, the candidate next bin, and the order itself (e.g., distance between bins, frequency of bin transitions, time of day, picker ID, etc.).
+Split data: Split the prepared data into training and testing sets.
+Train lightgbm ranker model: Train a LightGBM Ranker model on the training data using the engineered features and labels.
+Predict picking sequence: Use the trained LightGBM Ranker model to predict the ranking of the remaining bins for a given partial picking sequence. Construct the full predicted sequence based on these rankings.
+Evaluate ltr model: Adapt the evaluation strategy to assess the performance of the LightGBM Ranker model. This might involve using rank-aware metrics like Normalized Discounted Cumulative Gain (NDCG) or Mean Average Precision (MAP), in addition to sequence similarity metrics.
+Finish task: Summarize the findings, discuss the performance of the LightGBM Ranker model, and suggest potential next steps for further improvement.
